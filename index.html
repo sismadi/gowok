@@ -1,77 +1,214 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="Description" content="DonatJS by Wawan Sismadi">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-
-<meta http-equiv="Cache-control" content="public" max-age="31536000">
-<!-- <meta http-equiv="Cache-Control" content="max-age=1209600"> -->
-
-
-<link rel="manifest" href="pwa/manifest.json">
-
-<!-- Add to home screen for Safari on iOS -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Tereos ID Barcode">
-<link rel="apple-touch-icon" href="pwa/icons/icon-152x152.png">
-
-<!-- Windows related -->
-<meta name="msapplication-TileImage" content="pwa/icons/icon-144x144.png">
-<meta name="msapplication-TileColor" content="#386CC1">
-<meta name="theme-color" content="#164391">
-
-<meta property="og:title" content="DonatJS"/>
-<meta property="og:image" content="https://donat.id/donat/donat.png"/>
-<meta property="og:description" content="DonatJS"/>
-<meta property="og:url" content="https://donat.id"/>
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="627" />
-<!-- TYPE BELOW IS PROBABLY: "website" or "article" or look on https://ogp.me/#types -->
-<meta property="og:type" content="website"/>
-
-<title>DonatJS</title>
-<link rel="icon" type="image/svg+xml" href="pwa/favicon.svg">
-<link rel="icon" type="image/png" href="https://donat.id/pwa/favicon.png">
-<link rel="stylesheet" type="text/css" href="https://donat.id/donat/donat.css" async>
-<!-- <link rel="stylesheet" type="text/css" href="style.css" async> -->
-<style>
-    svg path{ fill: #6A0DAD;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kerangka MSVC - Solusi Modular untuk Aplikasi Web Masa Depan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            font-weight: normal;
+            font-size: inherit;
+        }
+        img {
+                    width: auto;
+                    max-height: 400px;
+                    display: block; /* Membuat gambar menjadi block */
+                    margin: 0 auto; /* Mengatur margin otomatis untuk meratakan gambar di tengah */
+                }
+                  header {
+            background: linear-gradient(to right, indigo, #4b0082);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #eee;
+            padding: 10px;
+            flex-wrap: wrap; /* Untuk responsivitas */
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: indigo;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 5px 10px; /* Tambahan padding untuk tampilan lebih baik */
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px; /* Membatasi lebar maksimum */
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 50px;
+        }
+        header h1, header h2, header h3 {
+            color: white;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            color: indigo;
+            text-align: center;
+        }
+        section {
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+        p {
+            text-align: justify;
+            font-size: 1.1em;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Responsif untuk fitur */
+        }
+        .features div {
+            width: 30%;
+            padding: 10px;
+            background: linear-gradient(to bottom, #7b68ee, #4b0082);
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px 0; /* Jarak antar fitur */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, indigo, #4b0082, #7b68ee);
+            color: white;
+        }
+        footer p {
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .contact {
+            background-color: #f4f4f4;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        /* Media query untuk responsivitas */
+        @media (max-width: 768px) {
+            .features div {
+                width: 100%; /* Fitur menjadi satu kolom pada layar kecil */
+            }
+            nav {
+                flex-direction: column; /* Menu vertikal di perangkat kecil */
+            }
+            nav a {
+                margin: 5px 0; /* Jarak vertikal antar link menu */
+            }
+        }
+    </style>
 </head>
 <body>
-<div id="modal" class="hide depan"></div>
-<div id="bawah"  class="pDarkColor toast hide" onclick="b.close('toast')" > </div>
 
+<header>
+    <h1>
+        <svg width="40" height="40" viewBox="0 0 24 24"   fill="red" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 10px;">
+            <path d="M 11 3 C 11 1 4 2 6 5 C 3 4 2 8 4 9 C 2 8 1 11 3 12 C 1 13 3 16 4 15 C 3 18 6 20 7 19 C 6 21 11 24 11 21 L 11 3 M 12 3 C 12 1 18 2 17 5 C 20 4 21 8 19 9 C 21 8 22 11 20 12 C 22 13 20 16 19 15 C 20 18 17 20 16 19 C 17 21 12 24 12 21 L 12 3" stroke="white" stroke-width="1" />
+        </svg>
+        Kerangka MSVC
+    </h1>
+    <h2>Solusi Modular untuk Aplikasi Web Masa Depan</h2>
+</header>
 
-<div id="menu" class="menu hide" tabindex="0" >
-<div class="logo hide"><a href="#"><i class="di-donat"></i> Donat</a></div>
-<ul id="menu-left">
-<li><a href="#" onClick="getPage('intro')"> <i class="di-house"></i> Intro</a></li>
-<li class="item"><a href="#" onClick="getPage('fitur')"> <i class="di-qrcode"></i>Fitur</a></li>
-<li><a href="#" onClick="getPage('demo')"> <i class="di-person"></i> Demo</a></li>
-</ul>
+<nav>
+    <a href="#model">Model</a>
+    <a href="#service">Service</a>
+    <a href="#view">View</a>
+    <a href="#controller">Controller</a>
+    <a href="#features">Fitur</a>
+    <a href="#purpose">Fungsi & Tujuan</a>
+    <a href="#contact">Kontak</a>
+</nav>
+
+<div class="container">
+  <section id="hero">
+      <h2>MSVC</h2>
+      <p>
+          <img src="gowok.svg">
+      </p>
+  </section>
+
+    <section id="model">
+        <h2>Model</h2>
+        <p>
+            Model adalah tulang punggung dari kerangka aplikasi Anda. Di sinilah data disusun, dikelola, dan dihubungkan dengan dunia nyata. Apakah Anda mengelola informasi pengguna, produk, atau transaksi? Semuanya dimulai dari model yang kuat dan solid. Di sinilah cerita data dimulai, dan di sini pula aplikasi Anda mendapatkan pondasi yang kokoh. Bangun struktur data Anda dengan baik, dan lihat aplikasi Anda tumbuh dengan stabilitas yang tak tergoyahkan.
+        </p>
+    </section>
+
+    <section id="service">
+        <h2>Service</h2>
+        <p>
+            Jika model adalah pondasi, maka <strong>Service</strong> adalah otak yang memastikan semua berjalan dengan lancar. Service adalah lapisan logika bisnis Anda, tempat di mana setiap keputusan penting diambil dan setiap aturan bisnis dijalankan. Service menjembatani antara data dan kebutuhan pengguna, memproses data, memvalidasinya, dan memastikan segalanya berfungsi sesuai rencana. Dengan Service yang efisien, Anda dapat memodifikasi logika bisnis tanpa mengganggu komponen lain. Inilah rahasia untuk aplikasi yang cerdas dan mudah dikembangkan.
+        </p>
+    </section>
+
+    <section id="view">
+        <h2>View</h2>
+        <p>
+            Pengguna Anda mungkin tidak peduli tentang bagaimana data dikelola di balik layar—yang mereka inginkan adalah pengalaman visual yang intuitif dan responsif. <strong>View</strong> adalah tempat interaksi pengguna terjadi, menggabungkan estetika dengan fungsionalitas. Saat pengguna berinteraksi dengan aplikasi Anda, view menyajikan data secara langsung, memperbarui antarmuka dengan mulus, dan memastikan pengalaman yang mulus dan menyenangkan. View Anda adalah wajah dari aplikasi, pastikan ia memberikan kesan terbaik.
+        </p>
+    </section>
+
+    <section id="controller">
+        <h2>Controller</h2>
+        <p>
+            Di balik layar, <strong>Controller</strong> adalah sutradara yang memastikan semua aktor di panggung aplikasi Anda memainkan perannya dengan sempurna. Controller menerima input dari pengguna, memprosesnya, dan menentukan langkah berikutnya. Dengan instruksi yang jelas, controller memandu alur kerja aplikasi Anda, memastikan data yang tepat dikirim ke tempat yang tepat, dan view diperbarui dengan cepat. Controller adalah sang pengatur orkestra, menjamin harmoni dalam aliran logika aplikasi Anda.
+        </p>
+    </section>
+
+    <section id="features">
+        <h2>Fitur Utama MSVC</h2>
+        <div class="features">
+            <div>
+                <h3>Modularitas</h3>
+                <p>Bangun aplikasi dengan komponen terpisah yang mudah dikembangkan, diuji, dan diperbaiki. Modularitas memastikan pengelolaan kode yang rapi dan fleksibel.</p>
+            </div>
+            <div>
+                <h3>Efisiensi</h3>
+                <p>MSVC mengurangi redundansi dengan memisahkan logika bisnis dan antarmuka, memungkinkan pengembang untuk fokus pada tugas yang benar-benar penting.</p>
+            </div>
+            <div>
+                <h3>Skalabilitas</h3>
+                <p>Dengan arsitektur yang mendukung pengembangan terdistribusi dan microservices, MSVC memungkinkan aplikasi berkembang bersama dengan bisnis Anda.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="purpose">
+        <h2>Fungsi & Tujuan</h2>
+        <p>
+            <strong>Fungsi utama MSVC</strong> adalah memisahkan komponen aplikasi menjadi lapisan yang berbeda untuk memudahkan pengembangan, pemeliharaan, dan pembaruan. MSVC menekankan pada pemisahan tugas, memungkinkan tim pengembang untuk bekerja secara efisien pada bagian aplikasi yang berbeda tanpa mengganggu bagian lain. Setiap lapisan (Model, Service, View, dan Controller) memiliki peran spesifik yang memperjelas tanggung jawab dan membuat kode lebih mudah dikelola.
+        </p>
+        <p>
+            <strong>Tujuan MSVC</strong> adalah menciptakan aplikasi yang mudah dikembangkan dan dipelihara. Dengan pemisahan yang jelas antara logika bisnis dan tampilan, pengembang dapat membuat perubahan tanpa risiko merusak bagian lain dari aplikasi. Arsitektur ini mendukung pengembangan aplikasi yang lebih besar dan kompleks, memastikan bahwa aplikasi tetap fleksibel dan mudah dikembangkan seiring pertumbuhan bisnis Anda.
+        </p>
+    </section>
 </div>
 
-<div id="main" class="main" >
-<div id="header" class="header" ></div>
-<div id="content" class="content" ></div>
-<div id="footer" class="footer" >
-Made with <svg style="width:24;height:24;">
-    <defs>
-    <linearGradient id="gradient" x1="50%" y1="-2.48949813e-15%" x2="50%" y2="100%" >
-    <stop stop-color="#6A0DAD" offset="0%"/>
-    <stop stop-color="#4B0082" offset="100%"/>
-    </linearGradient>
-    </defs>
-<path id="pathbayam" d="M 10 12 C 16 -8 33 11 12 21 C -6 10 5 -3 11 6 C 6 7 6 14 12 15 C 20 14 14 4 10 12 M 10 12 C 15 -4 27 5 20 15 C 18 8 12 7 10 12"></path>
-</svg> by donat.id
-</div>
+<div class="container contact" id="contact">
+    <h2>Kontak Kami</h2>
+    <p>Apakah Anda tertarik untuk mengetahui lebih lanjut tentang kerangka MSVC? Hubungi kami dan kami akan dengan senang hati membantu Anda.</p>
+    <p><strong>Email:</strong> halo@gowok.id</p>
+    <p><strong>Alamat:</strong> gowok.id</p>
 </div>
 
+<footer>
+    <p>&copy; 2024 Halo Gowok - Memberdayakan Pengembang untuk Aplikasi Masa Depan</p>
+</footer>
 
-<script type="text/javascript" src="https://donat.id/donat/donat.js"></script>
-<!-- <script type="text/javascript" src="https://donat.id/app/doc.js"></script> -->
 </body>
 </html>
