@@ -1,0 +1,11 @@
+g={
+  model:{
+    login:[{nama:'satu',pin:'123'}]
+  },
+  service:{
+    getlogin:function(){},
+    setlogin:function(){},
+  },
+  view:{},
+  controller:{},
+}
